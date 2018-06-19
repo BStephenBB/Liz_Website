@@ -1,0 +1,30 @@
+
+#about ul {
+    /* position: sticky */
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    background-color: rgb(95, 93, 93);
+}
+#navbar li {
+    float: right;
+    border-right: 1px solid #bbb;
+}
+#navbar li:first-child {
+    border-right: none;
+    float: left;
+}
+#navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+#navbar li a:hover {
+    color: green;
+}
+#nav-logo {
+    height: 16px;
+}
