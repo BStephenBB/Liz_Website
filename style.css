@@ -1,3 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700');* {
+    margin: 0;
+    padding: 0;
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: 
+        linear-gradient(
+      rgba(0, 0, 0, 0.5), 
+      rgba(0, 0, 0, 0.5)),
+        url("landing-background.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+ 
+}
+#title {
+    margin: 135px 0;
+}
+#title h1 {
+    font-family: 'Playfair Display', Courier, monospace;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+}
+#logo-div {
+    /* background-color: rgb(255, 0, 221); */
+    height: 116px;
+    margin-bottom: 50px;
+}
+#logo {
+    /* background-color: blue; */
+    height:116px;
+    margin: 0;
+}
+
+#navbar-home ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+#navbar-home ul li {
+    float: left;
+
+}
+#navbar-home ul li a {
+    display: block;
+    text-align: center;
+    padding: 0px 50px;
+    text-decoration: none;
+    font-family: 'Playfair Display', Courier, monospace;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    opacity: 0.6;
+}
+#navbar-home ul li a:hover {
+    opacity: 1;
+}
+
+
 
 #about ul {
     /* position: sticky */
@@ -27,4 +92,5 @@
 }
 #nav-logo {
     height: 16px;
-}
+} 
+
