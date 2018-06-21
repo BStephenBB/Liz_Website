@@ -18,17 +18,10 @@
     background-position: center;
     height: 100vh;
 }
-#title {
-    margin: 135px 0;
-}
-#title h1 {
-    font-family: 'Playfair Display', Courier, monospace;
-    color: #ffffff;
-    font-size: 14pt;
-    font-weight: 400;
-}
+
 #logo-div {
     height: 116px;
+    margin-top: 30vh;
     margin-bottom: 50px;
 }
 #logo {
@@ -105,7 +98,7 @@
 
 /* About Page CSS */
 #about {
-    background-color: rgb(148, 193, 233);
+    background-color: #EFEFEF;
     display: grid; 
     grid-template-columns: 553px 553px;
     grid-template-rows: 95px 171px 342px;
@@ -116,7 +109,6 @@
 #title-about {
     height: 95px;
     width: 100%;
-    background-color: aqua;
     grid-column: 1 / 3;
     grid-row: 1 / 2;
 }
@@ -131,13 +123,15 @@
 #portrait {
     height: 513px;
     width: 490px;
-    background-color: palegoldenrod;
     grid-column: 1 / 2;
     grid-row: 2 / 4;
     padding-bottom: 100px;
 }
+#portrait img {
+    height: 513px;
+    width: 490px;
+}
 #about-me {
-    background-color: palegreen;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
 }

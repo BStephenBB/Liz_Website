@@ -20,7 +20,11 @@
         </ul>
     </div>
     <div id="projects">
-        <div id="proj1" class="proj-style"><button class="button" onclick="openModal();currentSlide(1)" style="cursor: pointer;">See More</button></div>
+        <div id="proj1" class="proj-style">
+            <h1 id="header-preview">Title</h1>
+            <p id="text-preview">Lorem ipsum dolor sit amet consectetur adipisicing elit. lorem10</p>
+            <div class="button-div" onclick="openModal();currentSlide(1)">See More</div>
+        </div>
         <div id="proj2" class="proj-style"></div>
         <div id="proj3" class="proj-style"></div>
         <div id="proj4" class="proj-style"></div>
@@ -38,20 +42,44 @@
         <span class="close cursor" onclick="closeModal()">&times;</span>
         <div class="modal-content">
             <!-- slides -->
-            <div class="mySlides fade">
-                <img src="subslide1.png" style="width:100%">
+            <div class="mySlides fade">  
+                <div class="slide-items">
+                    <img src="subslide1.png">
+                    <div>
+                        <h1>Lorem, ipsum dolor.</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quis doloribus expedita ex delectus. Vitae, culpa omnis maxime aliquid adipisci id voluptatum explicabo consectetur dicta veritatis quaerat at corporis excepturi.</p>
+                    </div>        
+                </div>
             </div>
                         
             <div class="mySlides fade">
-                <img src="subslide2.png" style="width:100%">
+                <div class="slide-items">
+                    <img src="subslide2.png">
+                    <div>
+                        <h1>Lorem, ipsum dolor.</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quis doloribus expedita ex delectus. Vitae, culpa omnis maxime aliquid adipisci id voluptatum explicabo consectetur dicta veritatis quaerat at corporis excepturi.</p>
+                    </div> 
+                </div>
             </div>
                         
             <div class="mySlides fade">
-                <img src="subslide3.png" style="width:100%">
+                <div class="slide-items">
+                    <img src="subslide3.png">
+                    <div>
+                        <h1>Lorem, ipsum dolor.</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quis doloribus expedita ex delectus. Vitae, culpa omnis maxime aliquid adipisci id voluptatum explicabo consectetur dicta veritatis quaerat at corporis excepturi.</p>
+                    </div>
+                </div>
             </div>
         
             <div class="mySlides fade">
-                <img src="subslide4.png" style="width:100%">
+                <div class="slide-items">
+                    <img src="subslide4.png">
+                    <div>
+                        <h1>Lorem, ipsum dolor.</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quis doloribus expedita ex delectus. Vitae, culpa omnis maxime aliquid adipisci id voluptatum explicabo consectetur dicta veritatis quaerat at corporis excepturi.</p>
+                    </div>
+                </div>  
             </div>
 
             <!-- arrows -->
@@ -59,7 +87,7 @@
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
         
             <!-- dots -->
-            <div style="text-align:center">
+            <div style="text-align:center" id="dot-div">
                 <span class="dot" onclick="currentSlide(1)"></span> 
                 <span class="dot" onclick="currentSlide(2)"></span> 
                 <span class="dot" onclick="currentSlide(3)"></span>

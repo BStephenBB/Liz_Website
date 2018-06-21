@@ -6,6 +6,8 @@
 body {
     background-color: #EFEFEF;
 }
+
+/* project section layout */
 #projects-title {
     width: 100%;
     height: 95px;
@@ -32,7 +34,7 @@ body {
     display: inline;
     padding: 22px;
     font-family: "Playfair Display", Courier, monospace;
-    font-size: 18px;
+    font-size: 18pt;
     font-weight: 700;
     line-height: 25px;
 }
@@ -51,29 +53,62 @@ body {
     opacity: 1;
     color: green;
 }
+
+#proj1 h1,
+#proj1 p,
+#proj1 div {
+    visibility: hidden;
+}
+#proj1:hover h1,
+#proj1:hover p,
+#proj1:hover div {
+    visibility: visible;
+}
 .proj-style {
     background-color: paleturquoise;
     width: 350px;
     height: 300px;
 }
+
+.proj-style h1 {
+    font-family: "Playfair Display", Courier, monospace;
+    font-size: 18pt;
+    font-weight: 700;
+    text-align: center;
+    line-height: 18pt;
+    color: #333;
+    padding: 50px 0 20px 0;
+}
+.proj-style p {
+    font-family: "Open Sans", Courier, monospace;
+    font-size: 12pt;
+    text-align: left;
+    line-height: 12pt;
+    color: #333;
+    margin: 0 auto;
+    width: 75%;
+}
 /* .proj-style:hover {
     opacity: 0.5;
 } */
-.button {
-    background-color: white;
-    color: black;
-    border: 2px solid #4caf50;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
+/* will have to change centering method later */
+.button-div {
+    background-color: palegoldenrod;
+    width: 115px;
+    height: 35px;
     cursor: pointer;
-    
+    text-align: center;
+    line-height: 35px;
+    color: #333;
+    border: 2px solid #4caf50;
+    font-size: 14pt;
+    /* transition-duration: 0.4s; */
+    transition: background-color 0.4s, color 0.4s, border 0.4s;
+    margin-top: 20%;
+    margin-right: auto;
+    margin-left: auto;
 }
-.button:hover {
+.button-div:hover {
     background-color: #4CAF50; 
     color: white; 
     border: 2px solid #4CAF50;
@@ -86,7 +121,11 @@ body {
     justify-content: center;
 }
 
-/* slideshow */
+
+
+/* Modal slideshow styling */
+
+
 /* The Close Button */
 .close {
     color: white;
@@ -96,13 +135,14 @@ body {
     font-size: 35px;
     font-weight: bold;
 }
-  
 .close:hover,
 .close:focus {
     color: #999;
     text-decoration: none;
     cursor: pointer;
 }
+
+/* the modal */
 .modal {
     display: none;
     position: fixed;
@@ -113,35 +153,48 @@ body {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.603);
-}
-/* The Close Button */
-.close {
-  color: white;
-  position: absolute;
-  top: 10px;
-  right: 25px;
-  font-size: 35px;
-  font-weight: bold;
-}
-.close:hover,
-.close:focus {
-  color: #999;
-  text-decoration: none;
-  cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 .modal-content {
     position: relative;
     background-color: #fefefe;
     margin: auto;
     padding: 0;
-    width: 90%;
-    max-width: 400px;
+    height: 600px;
+    width: 1150px;
 }
+
+/* slideshow in the modal */
 .mySlides {
     display: none;
 }
-/* Next & previous buttons */
+.slide-items {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+    flex-direction: row;
+}
+.slide-items img {
+    padding-right: 100px;
+    height: 400px;
+    width: 500px;
+}
+.slide-items h1 {
+    font-family: "Playfair Display", Courier, monospace;
+    font-size: 18pt;
+    font-weight: 700;
+    line-height: 18pt;
+    color: #333333;
+    margin-bottom: 16px;
+}
+.slide-items p {
+    font-family: "Open Sans", Courier, monospace;
+    font-size: 12pt;
+    color: #333333;
+}
+/* Next & previous buttons for the slideshow */
 .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -155,16 +208,21 @@ body {
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
 }
-  
-  /* Position the "next button" to the right */
+/* Position the "next button" to the right*/
 .next {
     right: 0;
     border-radius: 3px 0 0 3px;
 }
-  
-  /* On hover, add a black background color with a little bit see-through */
+/* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
+}
+/* dot styling */
+#dot-div {
+    position: absolute;
+    bottom: 20px;
+    left: 45%;
+    background-color: blue;
 }
 .dot {
     cursor: pointer;
@@ -176,21 +234,18 @@ body {
     display: inline-block;
     transition: background-color 0.6s ease;
 }
-/* does liz want hover??????? */
 .active {
     background-color: #333;
 }
 .dot:hover {
     background-color: #808080;
 } 
-
 /* Fading animation */
 .fade {
     animation-name: fade;
     animation-duration: 1.5s;
-  }
-  
-  @keyframes fade {
+}
+@keyframes fade {
     from {opacity: .4} 
     to {opacity: 1}
-  }
+}
