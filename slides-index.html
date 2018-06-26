@@ -13,10 +13,10 @@
     </div>
     <div id="project-nav">
         <ul>
-            <li class="proj-nav-style"><a href="/">All</a></li>
-            <li class="proj-nav-style"><a href="/">Electric Cloud</a></li>
-            <li class="proj-nav-style"><a href="/">Webconnex</a></li>
-            <li class="proj-nav-style"><a href="/">UC Davis</a></li>
+            <li class="proj-nav-style"><a href="#projects-titlie" class="navli selected" onclick="setSelected(0)">All</a></li>
+            <li class="proj-nav-style"><a href="#project-title" class="navli" onclick="setSelected(1)">Electric Cloud</a></li>
+            <li class="proj-nav-style"><a href="#project-title" class="navli" onclick="setSelected(2)">Webconnex</a></li>
+            <li class="proj-nav-style"><a href="#project-title" class="navli" onclick="setSelected(3)">UC Davis</a></li>
         </ul>
     </div>
     <div id="projects">
@@ -34,10 +34,6 @@
         <div id="proj8" class="proj-style"></div>
         <div id="proj9" class="proj-style"></div>
     </div>
-
-
-    <div style="height: 100px; background-color: rgb(114, 214, 90)"></div>
-
     <div id="myModal" class="modal">
         <span class="close cursor" onclick="closeModal()">&times;</span>
         <div class="modal-content">
@@ -96,6 +92,42 @@
         </div>
     </div>
     <script>
+        var navLinks = document.getElementsByClassName("navli");
+        var selectedStatus = {
+            "all": true,
+            "electric_cloud": false,
+            "webconnext": false,
+            "uc_davis": false
+        };
+        function unSelectAll() {
+            var j = 0;
+            for(var prop in selectedStatus) {
+                if(selectedStatus[prop]) {
+                    navLinks[j].classList.toggle("selected");
+                    selectedStatus[prop] = false;
+                    return
+                }
+                j++;
+            }
+        }
+        function setSelected(navNum) {
+            unSelectAll();
+            navLinks[navNum].classList.toggle("selected");
+            switch(navNum) {
+                case 0:
+                    selectedStatus["all"] = true;
+                    break;
+                case 1:
+                    selectedStatus["electric_cloud"] = true;
+                    break;
+                case 2:
+                    selectedStatus["webconnext"] = true;
+                    break;
+                case 3:
+                    selectedStatus["uc_davis"] = true;
+                    break;
+            } 
+        }
         function openModal() {
             document.getElementById('myModal').style.display = "block";
         }
