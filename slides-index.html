@@ -13,10 +13,10 @@
     </div>
     <div id="project-nav">
         <ul>
-            <li class="proj-nav-style"><a href="#projects-titlie" class="navli selected" onclick="setSelected(0)">All</a></li>
-            <li class="proj-nav-style"><a href="#project-title" class="navli" onclick="setSelected(1)">Electric Cloud</a></li>
-            <li class="proj-nav-style"><a href="#project-title" class="navli" onclick="setSelected(2)">Webconnex</a></li>
-            <li class="proj-nav-style"><a href="#project-title" class="navli" onclick="setSelected(3)">UC Davis</a></li>
+            <li class="proj-nav-style"><a href="#projects-titlie" class="navli selected" onclick="resetNavAndGrid()">All</a></li>
+            <li class="proj-nav-style"><a href="#project-title" class="navli" onclick="filterAndNavStyle(1)">Electric Cloud</a></li>
+            <li class="proj-nav-style"><a href="#project-title" class="navli" onclick="filterAndNavStyle(2)">Webconnex</a></li>
+            <li class="proj-nav-style"><a href="#project-title" class="navli" onclick="filterAndNavStyle(3)">UC Davis</a></li>
         </ul>
     </div>
 
@@ -235,6 +235,99 @@
             slides[slideIndex-1].style.display = "block";
             dots[slideIndex-1].className += " active";
         }   
+
+
+
+
+         var row1 = document.getElementById("row1");
+    var row2 = document.getElementById("row2");
+    var row3 = document.getElementById("row3");
+    function gridFade(gridRow) {
+        switch(gridRow) {
+            case 1:
+            addOut(row2);
+            addOut(row3);
+            break;
+            case 2: 
+            addOut(row1);
+            addOut(row3)
+            break;
+            case 3: 
+            addOut(row1);
+            addOut(row2);
+        }
+    }
+    function removeGrid(gridRow) {
+        switch(gridRow) {
+            case 1:
+            row1.style.display = "flex";
+            row2.style.display = "none";
+            row3.style.display = "none";
+            break;
+            case 2:
+            row1.style.display = "none";
+            row2.style.display = "flex";
+            row3.style.display = "none";
+            break;
+            case 3:
+            row1.style.display = "none";
+            row2.style.display = "none";
+            row3.style.display = "flex";
+            break;
+        } 
+    }
+    function formatGrids(gridRow) {
+        gridFade(gridRow);
+        setTimeout(function() {removeGrid(gridRow);}, 420);
+        rowFadeIn();
+    }
+    function rowFadeIn() {
+        if(row1.classList.contains("get-out")) {
+            fadeIn(row1, t);
+        }
+        if(row2.classList.contains("get-out")) {
+            fadeIn(row2, t);
+        }
+        if(row3.classList.contains("get-out")) {
+            fadeIn(row3, t);
+        }
+    }
+    function resetGrid() {
+        row1.style.display = "flex";
+        row2.style.display = "flex";
+        row3.style.display = "flex";
+        rowFadeIn();
+    }
+    function addOut(ele) {
+        ele.classList.add("get-out");
+    }
+    function noOut(ele) {
+        ele.classList.remove("get-out");
+    }
+    function addIn(ele) {
+        ele.classList.add("get-in");
+    }
+    function noIn(ele) {
+        ele.classList.remove("get-in");
+    }
+    let t = 400;
+    function fadeIn(row, delay) {
+        setTimeout(function() {addIn(row)}, delay);
+        setTimeout(function() {noOut(row)}, delay * 2);
+        setTimeout(function() {noIn(row)}, delay * 3);
+    }
+
+
+    //format filter projects and adjust nav bar styling with one fucntion
+    function filterAndNavStyle(projs) {
+        setSelected(projs);
+        formatGrids(projs);
+    }
+
+    function resetNavAndGrid() {
+        setSelected(0);
+        resetGrid();
+    }
     </script>
 
 
