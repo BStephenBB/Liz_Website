@@ -21,7 +21,7 @@ body {
     font-size: 24pt;
 }
 #project-nav {
-    width: 33vw;
+    width: 800px;
     margin: 0 auto 35px auto;
 }
 #project-nav ul {
@@ -52,22 +52,12 @@ body {
     opacity: 0.9 !important;
 }
 
-#proj1 h1,
-#proj1 p,
-#proj1 div {
-    visibility: hidden;
-}
-#proj1:hover h1,
-#proj1:hover p,
-#proj1:hover div {
-    visibility: visible;
-}
 .proj-style {
-    background-color: paleturquoise;
     width: 350px;
     height: 300px;
+    position: relative;
+    background-size: contain;
 }
-
 .proj-style h1 {
     font-family: "Playfair Display", Courier, monospace;
     font-size: 18pt;
@@ -86,39 +76,120 @@ body {
     margin: 0 auto;
     width: 75%;
 }
-/* .proj-style:hover {
-    opacity: 0.5;
-} */
 /* will have to change centering method later */
 .button-div {
-    background-color: palegoldenrod;
-    width: 115px;
-    height: 35px;
+    background-color: #EFEFEF;
+    width: 125px;
+    height: 40px;
     cursor: pointer;
     text-align: center;
-    line-height: 35px;
+    line-height: 40px;
     color: #333;
-    border: 2px solid #4caf50;
+    border: 2px solid #333;
+    font-family: "Open Sans";
     font-size: 14pt;
-    /* transition-duration: 0.4s; */
     transition: background-color 0.4s, color 0.4s, border 0.4s;
     margin-top: 20%;
     margin-right: auto;
     margin-left: auto;
+    border-radius: 2px;
 }
 .button-div:hover {
     background-color: #4CAF50; 
-    color: white; 
+    color: #EFEFEF; 
     border: 2px solid #4CAF50;
 }
+
 #projects {
-    display: grid;
-    grid-template-columns: repeat(3, 350px);
-    grid-template-rows: repeat(3, 300px);
-    grid-gap: 50px;
-    justify-content: center;
+    height: auto;
+    width: 1150px;
+    margin: 0 auto;
+}
+#row1 {
+    display: flex;
+    flex-direction: row;
+}
+#row2 {
+    display: flex;
+    flex-direction: row;
+}
+#row3 {
+    display: flex;
+    flex-direction: row;
+}
+.right-space {
+    margin-right: 50px;
+}
+.row-space {
+    margin-bottom: 50px
+}
+#proj1 {
+    background-image: url(prev1.jpg);
+}
+#proj2 {
+    background-image: url(prev2.jpg);
+}
+#proj3 {
+    background-image: url(prev3.jpg);
+}
+#proj4 {
+    background-image: url(prev4.jpg);
+}
+#proj5 {
+    background-image: url(prev5.jpg);
+}
+#proj6 {
+    background-image: url(prev6.jpg);
+}
+#proj7 {
+    background-image: url(prev7.jpg);
+}
+#proj8 {
+    background-image: url(prev8.jpg);
+}
+#proj9 {
+    background-image: url(prev9.jpg);
 }
 
+.overlay {
+    position: absolute;
+    top: 0;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     height: 100%;
+     width: 100%;
+     opacity: 0;
+     transition: .5s ease;
+     background-color: rgb(225, 235, 238);
+}
+#proj1:hover .overlay {
+    opacity: 1;
+}
+#proj2:hover .overlay {
+    opacity: 1;
+}
+#proj3:hover .overlay {
+    opacity: 1;
+}
+#proj4:hover .overlay {
+    opacity: 1;
+}
+#proj5:hover .overlay {
+    opacity: 1;
+}
+#proj6:hover .overlay {
+    opacity: 1;
+}
+#proj7:hover .overlay {
+    opacity: 1;
+}
+#proj8:hover .overlay {
+    opacity: 1;
+}
+#proj9:hover .overlay {
+    opacity: 1;
+}
 
 
 /* Modal slideshow styling */
