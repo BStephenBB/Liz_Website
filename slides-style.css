@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
-* {
+/* * {
     margin: 0;
 }
 body {
     background-color: #EFEFEF;
-}
+} */
 
 /* project section layout */
 #projects-title {
@@ -131,31 +131,31 @@ body {
     margin-bottom: 50px
 }
 #proj1 {
-    background-image: url(prev1.jpg);
+    background-image: url(preview_pics/prev1.jpg);
 }
 #proj2 {
-    background-image: url(prev2.jpg);
+    background-image: url(preview_pics/prev2.jpg);
 }
 #proj3 {
-    background-image: url(prev3.jpg);
+    background-image: url(preview_pics/prev3.jpg);
 }
 #proj4 {
-    background-image: url(prev4.jpg);
+    background-image: url(preview_pics/prev4.jpg);
 }
 #proj5 {
-    background-image: url(prev5.jpg);
+    background-image: url(preview_pics/prev5.jpg);
 }
 #proj6 {
-    background-image: url(prev6.jpg);
+    background-image: url(preview_pics/prev6.jpg);
 }
 #proj7 {
-    background-image: url(prev7.jpg);
+    background-image: url(preview_pics/prev7.jpg);
 }
 #proj8 {
-    background-image: url(prev8.jpg);
+    background-image: url(preview_pics/prev8.jpg);
 }
 #proj9 {
-    background-image: url(prev9.jpg);
+    background-image: url(preview_pics/prev9.jpg);
 }
 .overlay {
     position: absolute;
@@ -235,8 +235,8 @@ body {
     background-color: #fefefe;
     margin: auto;
     padding: 0;
-    height: 600px;
-    width: 1150px;
+    height: 80vh;
+    width: 90vw;
 }
 
 /* slideshow in the modal */
@@ -268,17 +268,27 @@ body {
     display: none;
 }
 .slide-items {
-    padding-top: 100px;
+    width: 100%;
+    height: 100%;
+    /* padding-top: 100px;
     padding-bottom: 100px;
     padding-left: 100px;
-    padding-right: 100px;
+    padding-right: 100px; */
     display: flex;
     flex-direction: row;
+    background-color: green;
 }
 .slide-items img {
-    padding-right: 100px;
-    height: 400px;
-    width: 500px;
+    padding-right: 2.5vw;
+    height: 600px;
+  
+    width: 70%;
+    /* width: 850px; */
+    border: solid green;
+}
+.slide-items div {
+
+/* maybe add stuff here */
 }
 .slide-items h1 {
     font-family: "Playfair Display", Courier, monospace;
@@ -301,7 +311,7 @@ body {
     width: auto;
     padding: 16px;
     margin-top: -22px;
-    color: white;
+    color: black;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
@@ -314,7 +324,7 @@ body {
 }
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(28, 235, 166, 0.8);
 }
 /* dot styling */
 #dot-div {
@@ -344,7 +354,7 @@ body {
 /* Fading animation */
 .fade {
     animation-name: fade;
-    animation-duration: 0.5s;
+    animation-duration: 0.65s;
 }
 @keyframes fade {
     from {opacity: .4} 
