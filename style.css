@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700');
-/* @import url('https://fonts.googleapis.com/css?family=Open+Sans'); */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 * {
     margin: 0;
     padding: 0;
 }
 body {
-    background-color: #EFEFEF;
+    background-color: #fcfcfc;
 
 }
 /* Home Page CSS*/
@@ -18,7 +17,7 @@ body {
         linear-gradient(
       rgba(0, 0, 0, 0.5), 
       rgba(0, 0, 0, 0.5)),
-        url("landing-background.jpg");
+        url("landing-background.jpeg");
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -50,7 +49,7 @@ body {
     padding: 0px 25px;
     text-decoration: none;
     font-family: 'Playfair Display', Courier, monospace;
-    color: #ffffff;
+    color: #fcfcfc;
     font-size: 16pt;
     font-weight: 700;
     opacity: 0.6;
@@ -74,7 +73,7 @@ body {
     float: left;
     background: url(not-svg-logo-transparent.png) no-repeat;
     background-size: 100%;
-    margin: 7px 0 7px 10px;
+    margin: 7px 0 7px 18px;
 }
 #logo-nav:hover {
     background: url(not-svg-logo.png) no-repeat;
@@ -82,7 +81,7 @@ body {
 }
 #main-nav {
     height: 60px;
-    background-color: rgb(54, 54, 58);
+    background-color: #102012;
 }
 #main-nav ul {
     list-style-type: none;
@@ -108,12 +107,27 @@ body {
 
 /* About Page CSS */
 #about {
+    background-color: #e5e7e5;
     display: grid; 
-    grid-template-columns: 553px 553px;
-    grid-template-rows: 95px 171px 342px;
+    grid-template-columns: 490px 490px;
+    grid-template-rows: 95px 138px 375px;
     justify-content: center;
-    height: 708px;
-    grid-column-gap: 64px;
+    height: 608px;
+    grid-column-gap: 126px;
+    padding-bottom: 100px;
+}
+#about {
+    position: relative;
+    border-top: 52px solid transparent;
+    background-clip: padding-box;
+}
+#about:before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 0;
+    right: 0;
+    border-top: 2px solid rgba(204, 204, 204, 0);
 }
 #title-about {
     height: 95px;
@@ -134,7 +148,7 @@ body {
     width: 490px;
     grid-column: 1 / 2;
     grid-row: 2 / 4;
-    padding-bottom: 100px;
+    /* padding-bottom: 100px; */
 }
 #portrait img {
     height: 513px;
@@ -143,40 +157,39 @@ body {
 #about-me {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+
 }
 #about-me h3 {
     font-family: 'Playfair Display', Courier, monospace;
     color: #333333;
     font-size: 18pt;
     font-weight: 700;
-    margin: 0 0 26px 0;
-    line-height: 18px;
+    margin: 0 0 14px 0;
 }
 #about-me p {
     font-family: 'Open Sans', Courier, monospace;
     color: #333333;
     font-size: 12pt;
-    font-weight: 700;
-    margin: 0 0 26px 0;
-    line-height: 18px;
-
+    font-weight: 400;
+    /* margin: 0 0 26px 0; */
+    /* line-height: 18px; */
 }
 #skills {
-    height: 286px;
+
+    height: 375px;
     width: 490px;
-    background-color: palevioletred;
     grid-column: 2 / 3;
     grid-row: 3 / 4;
     align-self: center;
 }
-#process {
-    height: 800px;
-}
 
+/* contact section css */
+#contact {
+    background-color: #e5e7e5;
+}
 #contact-wrapper h1 {
     height: 100px;
     line-height: 100px;
-
     text-align: center;
     font-display: "Playfair Display";
     font-weight: 700;
@@ -221,8 +234,8 @@ body {
     font-weight: 700;
     font-size: 14px;
     color: #333;
-    height:40px;
+    height: 40px;
     line-height: 40px;
-    background: #DCDCDC;
+    background: #fcfcfc;
 }
 
