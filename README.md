@@ -1,2 +1,2 @@
 # Code for Liz's Website/Portfolio
-*add more information later*
+*Designed by Liz Miao and coded by Stephen Brown-Bourne*
