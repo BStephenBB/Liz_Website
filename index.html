@@ -1,440 +1,541 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Liz Miao Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="stylesheet" href="slides-style.css"> -->
     <link rel="shortcut icon" href="pics/32pxlogoQuick.png" type="image/x-icon" />
 </head>
+
 <body>
     <div id="home">
-        <div id="logo-div"><img src="pics/final-logo.svg" alt="logo" id="logo"></div>
+        <div id="logo-div">
+            <img src="pics/final-logo.svg" alt="logo" id="logo">
+        </div>
         <div id="navbar-home">
             <ul>
-                <li><a href="#nav-div" class="navstyle">About</a></li>
-                <li><a href="#jumphere" class="navstyle">Portfolio</a></li>
-                <li><a href="#contact" class="navstyle">Contact</a></li>
+                <li>
+                    <a href="#nav-div" class="navstyle">About</a>
+                </li>
+                <li>
+                    <a href="#jumphere" class="navstyle">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#contact" class="navstyle">Contact</a>
+                </li>
             </ul>
-        </div> 
+        </div>
     </div>
     <div id="nav-div">
-        <a href="#home"><div id="logo-nav"></div></a>
-        <div id="main-nav">       
+        <a href="#home">
+            <div id="logo-nav"></div>
+        </a>
+        <div id="main-nav">
             <ul id="navbar">
-                <li><a href="#contact" class="navstyle" id="contact-nav">Contact</a></li>
-                <li><a href="#jumphere" class="navstyle">Portfolio</a></li>
-                <li><a href="#about" class="navstyle">About</a></li>
+                <li>
+                    <a href="#contact" class="navstyle" id="contact-nav">Contact</a>
+                </li>
+                <li>
+                    <a href="#jumphere" class="navstyle">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#about" class="navstyle">About</a>
+                </li>
             </ul>
         </div>
     </div>
     <div id="about">
-        <div id="title-about"><h2>About</h2></div>
-        <div id="portrait"><img src="pics/portrait.jpg" alt="portrait of liz"></div>
+        <div id="title-about">
+            <h2>About</h2>
+        </div>
+        <div id="portrait">
+            <img src="pics/portrait.jpg" alt="portrait of liz">
+        </div>
         <div id="about-me">
             <h3>Liz Miao</h3>
-            <p>Hello! I'm a UI/UX designer with a passion for material design, usability, and aesthetics. Outside of work, I enjoy pilates, guitar, and photography.</p>
+            <p>Hello! I'm a UI/UX designer with a passion for material design, usability, and aesthetics. Outside of work, I
+                enjoy pilates, guitar, and photography.</p>
         </div>
-        <div id="skills"><img src="pics/skills.png"></div>
+        <div id="skills">
+            <img src="pics/skills.png">
+        </div>
     </div>
     <div id="jumphere" style="height: 60px;"></div>
     <div id="projects-wrapper">
-            <div id="projects-title">
-                <h1>Projects</h1>
+        <div id="projects-title">
+            <h1>Projects</h1>
+        </div>
+        <div id="project-nav">
+            <ul>
+                <li class="proj-nav-style">
+                    <a href="#projects-titlie" class="navli selected" onclick="resetNavAndGrid()">All</a>
+                </li>
+                <li class="proj-nav-style">
+                    <a href="#project-title" class="navli" onclick="filterAndNavStyle(1)">Electric Cloud</a>
+                </li>
+                <li class="proj-nav-style">
+                    <a href="#project-title" class="navli" onclick="filterAndNavStyle(2)">Webconnex</a>
+                </li>
+                <li class="proj-nav-style">
+                    <a href="#project-title" class="navli" onclick="filterAndNavStyle(3)">UC Davis</a>
+                </li>
+            </ul>
+        </div>
+        <div id="projects">
+            <div id="row1" class="row-space">
+                <div id="proj1" class="proj-style right-space">
+                    <div class="overlay">
+                        <h1 id="header-preview">DevOps Dashboard Widgets</h1>
+                        <p id="text-preview">Platform to view instant metrics across an entire delivery pipeline</p>
+                        <div class="button-div" onclick="openModal();setAndShowProj(1)">Learn More</div>
+                    </div>
+                </div>
+                <div id="proj2" class="proj-style right-space">
+                    <div class="overlay">
+                        <h1 id="header-preview">DevOps Dashboard Slideshow</h1>
+                        <p id="text-preview">Introduced slideshow feature that simplifies the expanded widget view</p>
+                        <div class="button-div" onclick="openModal();setAndShowProj(2)">Learn More</div>
+                    </div>
+                </div>
+                <div id="proj3" class="proj-style">
+                    <div class="overlay">
+                        <h1 id="header-preview">Contribution Heat Map</h1>
+                        <p id="text-preview">DevOps Foresight view for overall release risk score</p>
+                        <div class="button-div" onclick="openModal();setAndShowProj(3)">Learn More</div>
+                    </div>
+                </div>
             </div>
-                <div id="project-nav">
-                    <ul>
-                        <li class="proj-nav-style"><a href="#projects-titlie" class="navli selected" onclick="resetNavAndGrid()">All</a></li>
-                        <li class="proj-nav-style"><a href="#project-title" class="navli" onclick="filterAndNavStyle(1)">Electric Cloud</a></li>
-                        <li class="proj-nav-style"><a href="#project-title" class="navli" onclick="filterAndNavStyle(2)">Webconnex</a></li>
-                        <li class="proj-nav-style"><a href="#project-title" class="navli" onclick="filterAndNavStyle(3)">UC Davis</a></li>
-                    </ul>
-                </div>       
-                <div id="projects">
-                    <div id="row1" class="row-space">
-                        <div id="proj1" class="proj-style right-space">
-                            <div class="overlay">
-                                <h1 id="header-preview">DevOps Dashboard Widgets</h1>
-                                <p id="text-preview">Platform to view instant metrics across an entire delivery pipeline</p>
-                                <div class="button-div" onclick="openModal();setAndShowProj(1)">Learn More</div>
-                            </div>
-                        </div>
-                        <div id="proj2" class="proj-style right-space">
-                            <div class="overlay">    
-                                <h1 id="header-preview">DevOps Dashboard Slideshow</h1>
-                                <p id="text-preview">Introduced slideshow feature that simplifies the expanded widget view</p>
-                                <div class="button-div" onclick="openModal();setAndShowProj(2)">Learn More</div>
-                            </div>
-                        </div>
-                        <div id="proj3" class="proj-style">
-                            <div class="overlay">
-                                <h1 id="header-preview">Contribution Heat Map</h1>
-                                <p id="text-preview">DevOps Foresight view for overall release risk score</p>
-                                <div class="button-div" onclick="openModal();setAndShowProj(3)">Learn More</div>
-                            </div>
-                        </div>
+            <div id="row2" class="row-space">
+                <div id="proj4" class="proj-style right-space">
+                    <div class="overlay">
+                        <h1 id="header-preview">Publishing Page</h1>
+                        <p id="text-preview">Users go through this modal to publish their event page on any Webconnex product</p>
+                        <div class="button-div" onclick="openModal();setAndShowProj(4)">Learn More</div>
                     </div>
-                    <div id="row2" class="row-space">
-                        <div id="proj4" class="proj-style right-space">
-                            <div class="overlay">
-                                <h1 id="header-preview">Publishing Page</h1>
-                                <p id="text-preview">Users go through this modal to publish their event page on any Webconnex product</p>
-                                <div class="button-div" onclick="openModal();setAndShowProj(4)">Learn More</div>
-                            </div>  
-                        </div>
-                        <div id="proj5" class="proj-style right-space">
-                            <div class="overlay">
-                                <h1 id="header-preview">Box Office App</h1>
-                                <p id="text-preview">Ticketing app for customers to purchase tickets and merchandise on the day of the event</p>
-                                <div class="button-div" onclick="openModal();setAndShowProj(5)">Learn More</div>
-                            </div>  
-                        </div>
-                        <div id="proj6" class="proj-style">
-                            <div class="overlay">
-                                <h1 id="header-preview">Account Manager</h1>
-                                <p id="text-preview">Feature for the customer to manage events, payments, and user information</p>
-                                <div class="button-div" onclick="openModal();setAndShowProj(6)">See More</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="row3" class="row-space">
-                        <div id="proj7" class="proj-style right-space">
-                            <div class="overlay">
-                                <h1 id="header-preview">Design Portfolio</h1>
-                                <p id="text-preview">My first portfolio</p>
-                                <div class="button-div" onclick="openModal();setAndShowProj(7)">See More</div>
-                            </div>
-                        </div>
-                        <div id="proj8" class="proj-style right-space">
-                            <div class="overlay">
-                                <h1 id="header-preview">FitFifteen / Posture App</h1>
-                                <p id="text-preview">Workout App Mockups</p>
-                                <div class="button-div" onclick="openModal();setAndShowProj(8)">See More</div>
-                            </div>
-                        </div>
-                        <div id="proj9" class="proj-style">
-                            <div class="overlay">
-                                <h1 id="header-preview">Photography Website</h1>
-                                <p id="text-preview">Interactive elements for a mock photography website</p>
-                                <div class="button-div" onclick="openModal();setAndShowProj(9)">See More</div>
-                            </div>  
-                        </div>
-                    </div>  
                 </div>
-                <div id="myModal" class="modal">
-                    <span class="close cursor" onclick="closeModal()">&times;</span>
-                    <div class="modal-content">
-                        <!-- slides -->
-                        <div class="mySlides1 fade">  
-                            <div class="slide-items">
-                                <img src="slideshow_pics/ec-dashboard-1.jpg">
-                                <div>
-                                    <h1>Dashboard Widgets - Layout</h1>
-                                    <p>This is a before screenshot of the existing Electric Flow DevOps Insights Dashboard. There were many issues because there weren’t many UX implementations designed to make dashboarding a user-friendly process. In addition to coming up with various use case solutions for displaying time through filtering, I was given the task of going through all the specific widgets and coming up with new widget solutions that would affect both the visual and usability elements of the widgets. The layout of the dashboards changed from a maximum of 8 widgets to 6, so the widgets wouldn’t have readability issues at the minimum window size.</p>
-                                    <h3>Skills used: Sketch</h3>
-                                </div>        
-                            </div>
-                        </div>           
-                        <div class="mySlides1 fade">
-                            <div class="slide-items">
-                                <img src="slideshow_pics/ec-dashboard-2.jpg">
-                                <div>
-                                    <h1>Dashboard Widgets - Stacked Area Graph</h1>
-                                    <p>This new widget solution affected the Area Graph, Stacked Area Graph, Line Graph, and Multi-series Line Graph because they all consisted of the same widget layout and functionality.
-
-                                        Vertical lines were added so the user would make the most of the x-axis data and labels. There was also more structure to the legend, and the padding gives room for a double-stacked legend.</p>
-                                        <h3>Skills used: Sketch</h3>
-                                    </div> 
-                            </div>
-                        </div>                                   
-                        <div class="mySlides1 fade">
-                            <div class="slide-items">
-                                <img src="slideshow_pics/ec-dashboard-3.jpg">
-                                <div>
-                                    <h1>Dashboard Widgets - Stacked Area Graph</h1>
-                                    <p>In the old widget, users must click and drag horizontally on the graph area to view the data, and when they let go of the mouse, they were taken directly to the data center to view the selected dates. This means there’s no indication to the user that a click and drag functionality exists since it only pertains to the Area and Line graphs. The second problem is the user is involuntarily brought to the data center, and cannot edit their selection.
-
-                                        My solution solves both issues. First I added a hover instruction for the user explaining how to interact with the drill-down feature. Second, I gave users the ability to edit and cancel their selection if they accidentally clicked and dragged.</p>
-                                        <h3>Skills used: Sketch</h3>
-                                    </div>
-                            </div>
-                        </div>                    
-                        <div class="mySlides1 fade">
-                            <div class="slide-items">
-                                <img src="slideshow_pics/ec-dashboard-4.jpg">
-                                <div>
-                                    <h1>Dashboard Widgets - Donut Graph</h1>
-                                    <p>This is the only widget that had a clickable legend because the users weren’t able to select the slices when they were too small. I removed the white spacing between the slices since they often appeared thicker than the slice itself, causing the users to think they were slices. I also added a magnifying element on hover so users could enlarge the data.
-
-                                        It is vital for the users to see the percentages without hover because the dashboard feature is often displayed on a projector, and users must be able to get as much information at a glance. The old version only showed percentages around the donut graph if the percentage was larger than 20% because dev couldn’t squeeze in the data elegantly with the thinner slices. In my new solution, the legend turned vertical, displaying all percentages in a breathable way.</p>
-                                        <h3>Skills used: Sketch</h3>
-                                    </div>
-                            </div>  
-                        </div>          
-                        <div class="mySlides1 fade">
-                            <div class="slide-items">
-                                <img src="slideshow_pics/ec-dashboard-5.jpg">
-                                <div>
-                                    <h1>Dashboard Widgets - Stacked Bar Graph</h1>
-                                    <p>The issues with the bar graphs and (not pictured) histograms was the use of white space and the inability to see the thinner bars, which was an existing problem in the donut graph that was not caught for the bar graph.</p>
-                                    <h3>Skills used: Sketch</h3>
-                                </div>
-                            </div>  
-                        </div>            
-                        <div class="mySlides1 fade">
-                            <div class="slide-items">
-                                <img src="slideshow_pics/ec-dashboard-6.jpg">
-                                <div>
-                                    <h1>Dashboard Widgets - Table Chart</h1>
-                                    <p>The table had unaesthetic behavior and few layout rules. The white space wasn’t used efficiently and the table elements were clickable, but weren’t responsive on hover. The new version had an underline on hover to indicate clickability. I also added Column Labels so users know what the data means, as the widget titles are variable.</p>
-                                    <h3>Skills used: Sketch</h3>
-                                </div>
-                            </div>  
-                        </div>           
-                        <div class="mySlides2 fade">  
-                            <div class="slide-items">
-                                <img src="slideshow_pics/ec-slideshow-1.jpg">
-                                <div>
-                                    <h1>Dashboard Slideshow - Dashboard</h1>
-                                    <p>The issue with the previous version of the DevOps Insights Dashboards was that users couldn’t enlarge the widgets. My solution was to add expand buttons to the upper right corner of each widget.</p>
-                                    <h3>Skills used: Sketch</h3>
-                                </div>        
-                            </div>
-                        </div>                                   
-                        <div class="mySlides2 fade">
-                            <div class="slide-items">
-                                <img src="slideshow_pics/ec-slideshow-2.jpg">
-                                <div>
-                                    <h1>Dashboard Slideshow - Slideshow</h1>
-                                    <p>I took the expanded view to another level by introducing the slideshow view allowing users to remain in the expanded states and simultaneously view the other widgets via side arrow navigation or bottom pagination dots. The pagination dots also include a hover feature so users can navigate to the specific widget they want to view.</p>
-                                    <h3>Skills used: Sketch</h3>
-                                </div> 
-                            </div>
-                        </div>           
-                        <div class="mySlides3 fade">  
-                            <div class="slide-items">
-                                <img src="slideshow_pics/ec-foresight-1.jpg">
-                                <div>
-                                    <h1>Heat Map - Color Palette</h1>
-                                    <p>I was tasked with figuring out a color scheme that would indicate High, Medium, Low, and N/A for users looking at the data at a fast glance. I chose contrasting monochromatic colors to make the data more accessible to color-blind users. I played around with different text colors, going from all black texts to all white texts to mixed colors, and tested the readability on multiple projectors around the office.</p>
-                                    <h3>Skills used: Sketch, Illustrator</h3>
-                                </div>        
-                            </div>
-                        </div>                                    
-                        <div class="mySlides3 fade">
-                            <div class="slide-items">
-                                <img src="slideshow_pics/ec-foresight-2.jpg">
-                                <div>
-                                    <h1>Heat Map - Final View</h1>
-                                    <p>Here’s the final design</p>
-                                    <h3>Skills used: Sketch, Illustrator</h3>
-                                </div> 
-                            </div>
-                        </div>            
-                        <div class="mySlides4 fade">  
-                            <div class="slide-items">
-                                <img src="slideshow_pics/wbx-publish-1.jpg">
-                                <div>
-                                    <h1>Publishing Page - Gateway Setup</h1>
-                                    <p>The original modal contained a lot of wordiness and repetition of warnings, so I found ways to cut down on user distraction for a more positive and clear approach. The modals varied in size depending on content, so I made all the pages uniform to give the forms equal and breathable padding.</p>
-                                    <h3>Skills used: Sketch, Illustrator, InVision</h3>
-                                </div>        
-                            </div>
-                        </div>                                    
-                        <div class="mySlides4 fade">
-                            <div class="slide-items">
-                                <img src="slideshow_pics/wbx-publish-2.jpg">
-                                <div>
-                                    <h1>Publishing Page - Final Step</h1>
-                                    <p>The original modal contained a lot of wordiness and repetition of warnings, so I found ways to cut down on user distraction for a more positive and clear approach. The modals varied in size depending on content, so I made all the pages uniform to give the forms equal and breathable padding.</p>
-                                    <h3>Skills used: Sketch, Illustrator, InVision</h3>
-                                </div> 
-                            </div>
-                        </div>            
-                        <div class="mySlides5 fade">
-                            <div class="slide-items">
-                                <img src="slideshow_pics/wbx-box-1.jpg">
-                                <div>
-                                    <h1>Box Office App - Balsamiq</h1>
-                                    <p>The dev team needed a prototype for the merchandise page since the current page was both overly minimalistic and lacking function. I sketched out many ideas I had on paper and translated them onto Balsamiq, and explained my reasoning for my updated design features.</p>
-                                    <h3>Skills used: Illustrator, InVision, Balsamiq</h3>
-                                </div>
-                            </div>  
-                        </div>            
-                        <div class="mySlides5 fade">
-                            <div class="slide-items">
-                                <img src="slideshow_pics/wbx-box-2.jpg">
-                                <div>
-                                    <h1>Box Office App - Balsamiq</h1>
-                                    <p>Still using Balsamiq, I created a more visually appealing improvement of the first design and uploaded a series of images on InVision to click through with my boss.</p>
-                                    <h3>Skills used: Illustrator, InVision, Balsamiq</h3>
-                                </div>
-                            </div>  
-                        </div>            
-                        <div class="mySlides5 fade">
-                            <div class="slide-items">
-                                <img src="slideshow_pics/wbx-box-3.jpg">
-                                <div>
-                                    <h1>Box Office App - Final Produc</h1>
-                                    <p>This was the final product after prototyping a few times through InVision with real mockups made through Illustrator.</p>
-                                    <h3>Skills used: Illustrator, InVision, Balsamiq</h3>
-                                </div>
-                            </div>  
-                        </div>            
-                        <div class="mySlides6 fade">
-                            <div class="slide-items">
-                                <img src="slideshow_pics/wbx-acctmanager-1.jpg">
-                                <div>
-                                    <h1>Account Manager - Login</h1>
-                                    <p>The page was functional, but really hard to navigate through and displeasing to the eyes, so I created wireframes and mockups to generate the final prototype, shown here.</p>
-                                    <h3>Skills used: Sketch, Illustrator, InVision</h3>
-                                </div>
-                            </div>  
-                        </div>           
-                        <div class="mySlides6 fade">
-                            <div class="slide-items">
-                                <img src="slideshow_pics/wbx-acctmanager-2.jpg">
-                                <div>
-                                    <h1>Account Manager - Personal Information</h1>
-                                    <p>The page was functional, but really hard to navigate through and displeasing to the eyes, so I created wireframes and mockups to generate the final prototype, shown here.</p>
-                                    <h3>Skills used: Sketch, Illustrator, InVision</h3>
-                                </div>
-                            </div>  
-                        </div>           
-                        <div class="mySlides6 fade">
-                            <div class="slide-items">
-                                <img src="slideshow_pics/wbx-acctmanager-3.jpg">
-                                <div>
-                                    <h1>Account Manager - Registration</h1>
-                                    <p>The page was functional, but really hard to navigate through and displeasing to the eyes, so I created wireframes and mockups to generate the final prototype, shown here.</p>
-                                    <h3>Skills used: Sketch, Illustrator, InVision</h3>
-                                </div>
-                            </div>  
-                        </div>            
-                        <div class="mySlides7 fade">
-                            <div class="slide-items">
-                                <img src="slideshow_pics/ucd-portfolio-1.jpg">
-                                <div>
-                                    <h1>Design Portfolio - Draft</h1>
-                                    <p>This screenshot is the first draft of my portfolio website for a final project for a html/css class. The professor had assigned the project to be a one page portfolio, and as I coded the layout, I decided to take it to the next level and design a website I would use when applying for internships.</p>
-                                    <h3>Skills used: Illustrator, HTML5, CSS, Javascript, Version Control</h3>
-                                </div>
-                            </div>  
-                        </div>                
-                        <div class="mySlides7 fade">
-                            <div class="slide-items">
-                                <img src="slideshow_pics/ucd-portfolio-2.jpg">
-                                <div>
-                                    <h1>Design Portfolio</h1>
-                                    <p>This is as far as I took the portfolio. It definitely surpassed all expectations as a final project, but I was still not 100% pleased with the results.
-                                        I hadn’t taken any ui/ux classes at this point, and didn’t quite grasp the material design concepts, so I didn’t send this website out as my real portfolio. I am still super proud of the coding skills I gained. <br><br><a  id="folio-link" href="http://miaelii.ctuaaa.org/" target="_blank" style="text-decoration: none; color: #39434b;">Link to site!</a>
-                                        </p>
-                                        <h3>Skills used: Illustrator, HTML5, CSS, Javascript, Version Control</h3>
-                                    </div>
-                            </div>  
-                        </div>            
-                        <div class="mySlides8 fade">
-                            <div class="slide-items">
-                                <img src="slideshow_pics/ucd-app-1.jpg">
-                                <div>
-                                    <h1>FitFifteen - Moodboard</h1>
-                                    <p>FitFifteen stemmed from a design final and turned into a quarter-long special study project under a UX design professor. It is a fitness app centered around social change seeks to bridge the gap between the fitness industry and everyone else. It targets non-gym goers and busy students and people with time-consuming jobs. This is a mood board that I made for the project from either existing workout apps, or apps with a clean design that I wanted to get inspiration from.</p>
-                                    <h3>Skills used: Sketch, Illustrator, HTML5, CSS, Javascript, Version Control, Firebase</h3>
-                                </div>
-                            </div>  
-                        </div>            
-                        <div class="mySlides8 fade">
-                            <div class="slide-items">
-                                <img src="slideshow_pics/ucd-app-2.jpg">
-                                <div>
-                                    <h1>FitFifteen - 1st Rendition</h1>
-                                    <p>This is a pretty rough wireframe. My main goal in this was to get the usability down before I worried about color and aesthetics, which I found really challenging as my target audience quickly changed to a female demographic. This was the first project that I had worked on in Sketch, as this would be my only opportunity since my university didn’t offer any classes that incorporated Sketch. I went into creating a posture app instead of a workout app and then went back to creating the workout app.</p>
-                                    <h3>Skills used: Sketch, Illustrator, HTML5, CSS, Javascript, Version Control, Firebase</h3>
-                                </div>
-                            </div>  
-                        </div>            
-                        <div class="mySlides8 fade">
-                            <div class="slide-items">
-                                <img src="slideshow_pics/ucd-app-3.jpg">
-                                <div>
-                                    <h1>FitFifteen - Final Mockups</h1>
-                                    <p>As I honed in on my target audience, the app layout and color palette became more and more clear to me.</p>
-                                    <h3>Skills used: Sketch, Illustrator, HTML5, CSS, Javascript, Version Control, Firebase</h3>
-                                </div>
-                            </div>  
-                        </div>             
-                        <div class="mySlides9 fade">
-                            <div class="slide-items">
-                                <img src="slideshow_pics/ucd-photo-1.jpg">
-                                <div>
-                                    <h1>Photography Website - Landing Page</h1>
-                                    <p>The objective was to create a an interactive experience through a faux website.</p>
-                                    <h3>Skills used: Illustrator, AfterEffects</h3>
-                                </div>
-                            </div>  
-                        </div>           
-                        <div class="mySlides9 fade">
-                            <div class="slide-items">
-                                <img src="slideshow_pics/ucd-photo-2.jpg">
-                                <div>
-                                    <h1>Photography Website - Gallery</h1>
-                                    <p>The objective was to create a an interactive experience through a faux website.</p>
-                                    <h3>Skills used: Illustrator, AfterEffects</h3>
-                                </div>
-                            </div>  
-                        </div>                                                
-                        <!-- arrows -->
-                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                        <a class="next" onclick="plusSlides(1)">&#10095;</a>                    
-                        <!-- dots -->
-                        <div style="text-align:center" id="dot-div">
-                            <span class="dot dot1" onclick="currentSlide(1)"></span> 
-                            <span class="dot dot1" onclick="currentSlide(2)"></span> 
-                            <span class="dot dot1" onclick="currentSlide(3)"></span>
-                            <span class="dot dot1" onclick="currentSlide(4)"></span> 
-                            <span class="dot dot1" onclick="currentSlide(5)"></span> 
-                            <span class="dot dot1" onclick="currentSlide(6)"></span> 
-                        </div>            
-                        <div style="text-align:center" id="dot-div">
-                            <span class="dot dot2" onclick="currentSlide(1)"></span> 
-                            <span class="dot dot2" onclick="currentSlide(2)"></span> 
-                        </div>            
-                        <div style="text-align:center" id="dot-div">
-                            <span class="dot dot3" onclick="currentSlide(1)"></span> 
-                            <span class="dot dot3" onclick="currentSlide(2)"></span> 
-                        </div>           
-                        <div style="text-align:center" id="dot-div">
-                            <span class="dot dot4" onclick="currentSlide(1)"></span> 
-                            <span class="dot dot4" onclick="currentSlide(2)"></span> 
-                        </div>            
-                        <div style="text-align:center" id="dot-div">
-                            <span class="dot dot5" onclick="currentSlide(1)"></span> 
-                            <span class="dot dot5" onclick="currentSlide(2)"></span>
-                            <span class="dot dot5" onclick="currentSlide(3)"></span> 
-                        </div>           
-                        <div style="text-align:center" id="dot-div">
-                            <span class="dot dot6" onclick="currentSlide(1)"></span> 
-                            <span class="dot dot6" onclick="currentSlide(2)"></span>
-                            <span class="dot dot6" onclick="currentSlide(3)"></span> 
-                        </div>            
-                        <div style="text-align:center" id="dot-div">
-                            <span class="dot dot7" onclick="currentSlide(1)"></span> 
-                            <span class="dot dot7" onclick="currentSlide(2)"></span> 
-                        </div>           
-                        <div style="text-align:center" id="dot-div">
-                            <span class="dot dot8" onclick="currentSlide(1)"></span> 
-                            <span class="dot dot8" onclick="currentSlide(2)"></span>
-                            <span class="dot dot8" onclick="currentSlide(3)"></span> 
-                        </div>            
-                        <div style="text-align:center" id="dot-div">
-                            <span class="dot dot9" onclick="currentSlide(1)"></span> 
-                            <span class="dot dot9" onclick="currentSlide(2)"></span> 
+                <div id="proj5" class="proj-style right-space">
+                    <div class="overlay">
+                        <h1 id="header-preview">Box Office App</h1>
+                        <p id="text-preview">Ticketing app for customers to purchase tickets and merchandise on the day of the event</p>
+                        <div class="button-div" onclick="openModal();setAndShowProj(5)">Learn More</div>
+                    </div>
+                </div>
+                <div id="proj6" class="proj-style">
+                    <div class="overlay">
+                        <h1 id="header-preview">Account Manager</h1>
+                        <p id="text-preview">Feature for the customer to manage events, payments, and user information</p>
+                        <div class="button-div" onclick="openModal();setAndShowProj(6)">Learn More</div>
+                    </div>
+                </div>
+            </div>
+            <div id="row3" class="row-space">
+                <div id="proj7" class="proj-style right-space">
+                    <div class="overlay">
+                        <h1 id="header-preview">Design Portfolio</h1>
+                        <p id="text-preview">My first portfolio</p>
+                        <div class="button-div" onclick="openModal();setAndShowProj(7)">Learn More</div>
+                    </div>
+                </div>
+                <div id="proj8" class="proj-style right-space">
+                    <div class="overlay">
+                        <h1 id="header-preview">FitFifteen / Posture App</h1>
+                        <p id="text-preview">Workout App Mockups</p>
+                        <div class="button-div" onclick="openModal();setAndShowProj(8)">Learn More</div>
+                    </div>
+                </div>
+                <div id="proj9" class="proj-style">
+                    <div class="overlay">
+                        <h1 id="header-preview">Photography Website</h1>
+                        <p id="text-preview">Interactive elements for a mock photography website</p>
+                        <div class="button-div" onclick="openModal();setAndShowProj(9)">Learn More</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+                <!-- slides -->
+                <div class="mySlides1 fade">
+                    <div class="slide-items">
+                        <img src="slideshow_pics/ec-dashboard-1.jpg">
+                        <div>
+                            <h1>Dashboard Widgets - Layout</h1>
+                            <p>This is a before screenshot of the existing Electric Flow DevOps Insights Dashboard. There were
+                                many issues because there weren’t many UX implementations designed to make dashboarding a
+                                user-friendly process. In addition to coming up with various use case solutions for displaying
+                                time through filtering, I was given the task of going through all the specific widgets and
+                                coming up with new widget solutions that would affect both the visual and usability elements
+                                of the widgets. The layout of the dashboards changed from a maximum of 8 widgets to 6, so
+                                the widgets wouldn’t have readability issues at the minimum window size.</p>
+                            <h3>Skills used: Sketch</h3>
                         </div>
                     </div>
                 </div>
-                
+                <div class="mySlides1 fade">
+                    <div class="slide-items">
+                        <img src="slideshow_pics/ec-dashboard-2.jpg">
+                        <div>
+                            <h1>Dashboard Widgets - Stacked Area Graph</h1>
+                            <p>This new widget solution affected the Area Graph, Stacked Area Graph, Line Graph, and Multi-series
+                                Line Graph because they all consisted of the same widget layout and functionality. Vertical
+                                lines were added so the user would make the most of the x-axis data and labels. There was
+                                also more structure to the legend, and the padding gives room for a double-stacked legend.</p>
+                            <h3>Skills used: Sketch</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="mySlides1 fade">
+                    <div class="slide-items">
+                        <img src="slideshow_pics/ec-dashboard-3.jpg">
+                        <div>
+                            <h1>Dashboard Widgets - Stacked Area Graph</h1>
+                            <p>In the old widget, users must click and drag horizontally on the graph area to view the data,
+                                and when they let go of the mouse, they were taken directly to the data center to view the
+                                selected dates. This means there’s no indication to the user that a click and drag functionality
+                                exists since it only pertains to the Area and Line graphs. The second problem is the user
+                                is involuntarily brought to the data center, and cannot edit their selection. My solution
+                                solves both issues. First I added a hover instruction for the user explaining how to interact
+                                with the drill-down feature. Second, I gave users the ability to edit and cancel their selection
+                                if they accidentally clicked and dragged.</p>
+                            <h3>Skills used: Sketch</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="mySlides1 fade">
+                    <div class="slide-items">
+                        <img src="slideshow_pics/ec-dashboard-4.jpg">
+                        <div>
+                            <h1>Dashboard Widgets - Donut Graph</h1>
+                            <p>This is the only widget that had a clickable legend because the users weren’t able to select
+                                the slices when they were too small. I removed the white spacing between the slices since
+                                they often appeared thicker than the slice itself, causing the users to think they were slices.
+                                I also added a magnifying element on hover so users could enlarge the data. It is vital for
+                                the users to see the percentages without hover because the dashboard feature is often displayed
+                                on a projector, and users must be able to get as much information at a glance. The old version
+                                only showed percentages around the donut graph if the percentage was larger than 20% because
+                                dev couldn’t squeeze in the data elegantly with the thinner slices. In my new solution, the
+                                legend turned vertical, displaying all percentages in a breathable way.</p>
+                            <h3>Skills used: Sketch</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="mySlides1 fade">
+                    <div class="slide-items">
+                        <img src="slideshow_pics/ec-dashboard-5.jpg">
+                        <div>
+                            <h1>Dashboard Widgets - Stacked Bar Graph</h1>
+                            <p>The issues with the bar graphs and (not pictured) histograms was the use of white space and the
+                                inability to see the thinner bars, which was an existing problem in the donut graph that
+                                was not caught for the bar graph.</p>
+                            <h3>Skills used: Sketch</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="mySlides1 fade">
+                    <div class="slide-items">
+                        <img src="slideshow_pics/ec-dashboard-6.jpg">
+                        <div>
+                            <h1>Dashboard Widgets - Table Chart</h1>
+                            <p>The table had unaesthetic behavior and few layout rules. The white space wasn’t used efficiently
+                                and the table elements were clickable, but weren’t responsive on hover. The new version had
+                                an underline on hover to indicate clickability. I also added Column Labels so users know
+                                what the data means, as the widget titles are variable.</p>
+                            <h3>Skills used: Sketch</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="mySlides2 fade">
+                    <div class="slide-items">
+                        <img src="slideshow_pics/ec-slideshow-1.jpg">
+                        <div>
+                            <h1>Dashboard Slideshow - Dashboard</h1>
+                            <p>The issue with the previous version of the DevOps Insights Dashboards was that users couldn’t
+                                enlarge the widgets. My solution was to add expand buttons to the upper right corner of each
+                                widget.
+                            </p>
+                            <h3>Skills used: Sketch</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="mySlides2 fade">
+                    <div class="slide-items">
+                        <img src="slideshow_pics/ec-slideshow-2.jpg">
+                        <div>
+                            <h1>Dashboard Slideshow - Slideshow</h1>
+                            <p>I took the expanded view to another level by introducing the slideshow view allowing users to
+                                remain in the expanded states and simultaneously view the other widgets via side arrow navigation
+                                or bottom pagination dots. The pagination dots also include a hover feature so users can
+                                navigate to the specific widget they want to view.</p>
+                            <h3>Skills used: Sketch</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="mySlides3 fade">
+                    <div class="slide-items">
+                        <img src="slideshow_pics/ec-foresight-1.jpg">
+                        <div>
+                            <h1>Heat Map - Color Palette</h1>
+                            <p>I was tasked with figuring out a color scheme that would indicate High, Medium, Low, and N/A
+                                for users looking at the data at a fast glance. I chose contrasting monochromatic colors
+                                to make the data more accessible to color-blind users. I played around with different text
+                                colors, going from all black texts to all white texts to mixed colors, and tested the readability
+                                on multiple projectors around the office.</p>
+                            <h3>Skills used: Sketch, Illustrator</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="mySlides3 fade">
+                    <div class="slide-items">
+                        <img src="slideshow_pics/ec-foresight-2.jpg">
+                        <div>
+                            <h1>Heat Map - Final View</h1>
+                            <p>Here’s the final design</p>
+                            <h3>Skills used: Sketch, Illustrator</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="mySlides4 fade">
+                    <div class="slide-items">
+                        <img src="slideshow_pics/wbx-publish-1.jpg">
+                        <div>
+                            <h1>Publishing Page - Gateway Setup</h1>
+                            <p>The original modal contained a lot of wordiness and repetition of warnings, so I found ways to
+                                cut down on user distraction for a more positive and clear approach. The modals varied in
+                                size depending on content, so I made all the pages uniform to give the forms equal and breathable
+                                padding.
+                            </p>
+                            <h3>Skills used: Sketch, Illustrator, InVision</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="mySlides4 fade">
+                    <div class="slide-items">
+                        <img src="slideshow_pics/wbx-publish-2.jpg">
+                        <div>
+                            <h1>Publishing Page - Final Step</h1>
+                            <p>The original modal contained a lot of wordiness and repetition of warnings, so I found ways to
+                                cut down on user distraction for a more positive and clear approach. The modals varied in
+                                size depending on content, so I made all the pages uniform to give the forms equal and breathable
+                                padding.
+                            </p>
+                            <h3>Skills used: Sketch, Illustrator, InVision</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="mySlides5 fade">
+                    <div class="slide-items">
+                        <img src="slideshow_pics/wbx-box-1.jpg">
+                        <div>
+                            <h1>Box Office App - Balsamiq</h1>
+                            <p>The dev team needed a prototype for the merchandise page since the current page was both overly
+                                minimalistic and lacking function. I sketched out many ideas I had on paper and translated
+                                them onto Balsamiq, and explained my reasoning for my updated design features.</p>
+                            <h3>Skills used: Illustrator, InVision, Balsamiq</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="mySlides5 fade">
+                    <div class="slide-items">
+                        <img src="slideshow_pics/wbx-box-2.jpg">
+                        <div>
+                            <h1>Box Office App - Balsamiq</h1>
+                            <p>Still using Balsamiq, I created a more visually appealing improvement of the first design and
+                                uploaded a series of images on InVision to click through with my boss.</p>
+                            <h3>Skills used: Illustrator, InVision, Balsamiq</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="mySlides5 fade">
+                    <div class="slide-items">
+                        <img src="slideshow_pics/wbx-box-3.jpg">
+                        <div>
+                            <h1>Box Office App - Final Produc</h1>
+                            <p>This was the final product after prototyping a few times through InVision with real mockups made
+                                through Illustrator.</p>
+                            <h3>Skills used: Illustrator, InVision, Balsamiq</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="mySlides6 fade">
+                    <div class="slide-items">
+                        <img src="slideshow_pics/wbx-acctmanager-1.jpg">
+                        <div>
+                            <h1>Account Manager - Login</h1>
+                            <p>The page was functional, but really hard to navigate through and displeasing to the eyes, so
+                                I created wireframes and mockups to generate the final prototype, shown here.</p>
+                            <h3>Skills used: Sketch, Illustrator, InVision</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="mySlides6 fade">
+                    <div class="slide-items">
+                        <img src="slideshow_pics/wbx-acctmanager-2.jpg">
+                        <div>
+                            <h1>Account Manager - Personal Information</h1>
+                            <p>The page was functional, but really hard to navigate through and displeasing to the eyes, so
+                                I created wireframes and mockups to generate the final prototype, shown here.</p>
+                            <h3>Skills used: Sketch, Illustrator, InVision</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="mySlides6 fade">
+                    <div class="slide-items">
+                        <img src="slideshow_pics/wbx-acctmanager-3.jpg">
+                        <div>
+                            <h1>Account Manager - Registration</h1>
+                            <p>The page was functional, but really hard to navigate through and displeasing to the eyes, so
+                                I created wireframes and mockups to generate the final prototype, shown here.</p>
+                            <h3>Skills used: Sketch, Illustrator, InVision</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="mySlides7 fade">
+                    <div class="slide-items">
+                        <img src="slideshow_pics/ucd-portfolio-1.jpg">
+                        <div>
+                            <h1>Design Portfolio - Draft</h1>
+                            <p>This screenshot is the first draft of my portfolio website for a final project for a html/css
+                                class. The professor had assigned the project to be a one page portfolio, and as I coded
+                                the layout, I decided to take it to the next level and design a website I would use when
+                                applying for internships.</p>
+                            <h3>Skills used: Illustrator, HTML5, CSS, Javascript, Version Control</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="mySlides7 fade">
+                    <div class="slide-items">
+                        <img src="slideshow_pics/ucd-portfolio-2.jpg">
+                        <div>
+                            <h1>Design Portfolio</h1>
+                            <p>This is as far as I took the portfolio. It definitely surpassed all expectations as a final project,
+                                but I was still not 100% pleased with the results. I hadn’t taken any ui/ux classes at this
+                                point, and didn’t quite grasp the material design concepts, so I didn’t send this website
+                                out as my real portfolio. I am still super proud of the coding skills I gained.
+                                <br>
+                                <br>
+                                <a id="folio-link" href="http://miaelii.ctuaaa.org/" target="_blank" style="text-decoration: none; color: #39434b;">Link to site!</a>
+                            </p>
+                            <h3>Skills used: Illustrator, HTML5, CSS, Javascript, Version Control</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="mySlides8 fade">
+                    <div class="slide-items">
+                        <img src="slideshow_pics/ucd-app-1.jpg">
+                        <div>
+                            <h1>FitFifteen - Moodboard</h1>
+                            <p>FitFifteen stemmed from a design final and turned into a quarter-long special study project under
+                                a UX design professor. It is a fitness app centered around social change seeks to bridge
+                                the gap between the fitness industry and everyone else. It targets non-gym goers and busy
+                                students and people with time-consuming jobs. This is a mood board that I made for the project
+                                from either existing workout apps, or apps with a clean design that I wanted to get inspiration
+                                from.
+                            </p>
+                            <h3>Skills used: Sketch, Illustrator, HTML5, CSS, Javascript, Version Control, Firebase</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="mySlides8 fade">
+                    <div class="slide-items">
+                        <img src="slideshow_pics/ucd-app-2.jpg">
+                        <div>
+                            <h1>FitFifteen - 1st Rendition</h1>
+                            <p>This is a pretty rough wireframe. My main goal in this was to get the usability down before I
+                                worried about color and aesthetics, which I found really challenging as my target audience
+                                quickly changed to a female demographic. This was the first project that I had worked on
+                                in Sketch, as this would be my only opportunity since my university didn’t offer any classes
+                                that incorporated Sketch. I went into creating a posture app instead of a workout app and
+                                then went back to creating the workout app.</p>
+                            <h3>Skills used: Sketch, Illustrator, HTML5, CSS, Javascript, Version Control, Firebase</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="mySlides8 fade">
+                    <div class="slide-items">
+                        <img src="slideshow_pics/ucd-app-3.jpg">
+                        <div>
+                            <h1>FitFifteen - Final Mockups</h1>
+                            <p>As I honed in on my target audience, the app layout and color palette became more and more clear
+                                to me.</p>
+                            <h3>Skills used: Sketch, Illustrator, HTML5, CSS, Javascript, Version Control, Firebase</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="mySlides9 fade">
+                    <div class="slide-items">
+                        <img src="slideshow_pics/ucd-photo-1.jpg">
+                        <div>
+                            <h1>Photography Website - Landing Page</h1>
+                            <p>The objective was to create a an interactive experience through a faux website.</p>
+                            <h3>Skills used: Illustrator, AfterEffects</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="mySlides9 fade">
+                    <div class="slide-items">
+                        <img src="slideshow_pics/ucd-photo-2.jpg">
+                        <div>
+                            <h1>Photography Website - Gallery</h1>
+                            <p>The objective was to create a an interactive experience through a faux website.</p>
+                            <h3>Skills used: Illustrator, AfterEffects</h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- arrows -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <!-- dots -->
+                <div style="text-align:center" id="dot-div">
+                    <span class="dot dot1" onclick="currentSlide(1)"></span>
+                    <span class="dot dot1" onclick="currentSlide(2)"></span>
+                    <span class="dot dot1" onclick="currentSlide(3)"></span>
+                    <span class="dot dot1" onclick="currentSlide(4)"></span>
+                    <span class="dot dot1" onclick="currentSlide(5)"></span>
+                    <span class="dot dot1" onclick="currentSlide(6)"></span>
+                </div>
+                <div style="text-align:center" id="dot-div">
+                    <span class="dot dot2" onclick="currentSlide(1)"></span>
+                    <span class="dot dot2" onclick="currentSlide(2)"></span>
+                </div>
+                <div style="text-align:center" id="dot-div">
+                    <span class="dot dot3" onclick="currentSlide(1)"></span>
+                    <span class="dot dot3" onclick="currentSlide(2)"></span>
+                </div>
+                <div style="text-align:center" id="dot-div">
+                    <span class="dot dot4" onclick="currentSlide(1)"></span>
+                    <span class="dot dot4" onclick="currentSlide(2)"></span>
+                </div>
+                <div style="text-align:center" id="dot-div">
+                    <span class="dot dot5" onclick="currentSlide(1)"></span>
+                    <span class="dot dot5" onclick="currentSlide(2)"></span>
+                    <span class="dot dot5" onclick="currentSlide(3)"></span>
+                </div>
+                <div style="text-align:center" id="dot-div">
+                    <span class="dot dot6" onclick="currentSlide(1)"></span>
+                    <span class="dot dot6" onclick="currentSlide(2)"></span>
+                    <span class="dot dot6" onclick="currentSlide(3)"></span>
+                </div>
+                <div style="text-align:center" id="dot-div">
+                    <span class="dot dot7" onclick="currentSlide(1)"></span>
+                    <span class="dot dot7" onclick="currentSlide(2)"></span>
+                </div>
+                <div style="text-align:center" id="dot-div">
+                    <span class="dot dot8" onclick="currentSlide(1)"></span>
+                    <span class="dot dot8" onclick="currentSlide(2)"></span>
+                    <span class="dot dot8" onclick="currentSlide(3)"></span>
+                </div>
+                <div style="text-align:center" id="dot-div">
+                    <span class="dot dot9" onclick="currentSlide(1)"></span>
+                    <span class="dot dot9" onclick="currentSlide(2)"></span>
+                </div>
+            </div>
+        </div>
+
     </div>
     <div id="contact">
         <div id="contact-wrapper">
@@ -442,12 +543,28 @@
         </div>
         <div id="opportunities">
             <p>I'm always looking for new opportunities!</p>
-        </div>     
+        </div>
         <div id="contact-icons">
-            <a href="mailto:miaeliidesigns@gmail.com"><div id="mail"><img class="icon" src="contact_icons/Mail.png" alt="mail icon"></div></a>
-            <a href="https://www.linkedin.com/in/liz-miao-058199107/" target="_blank"><div id="linkedin"><img class="icon" src="contact_icons/Linkedin.png" alt="linkedin icon"></div></a>
-            <a href="https://www.facebook.com/miaeliii" target="_blank"><div id="facebook"><img class="icon" src="contact_icons/Facebook.png" alt="facebook icon"></div></a>
-            <a href="https://www.instagram.com/miaelii/" target="_blank"><div id="instagram"><img class="icon" src="contact_icons/Instagram.png" alt="instagram icon"></div></a>
+            <a href="mailto:miaeliidesigns@gmail.com">
+                <div id="mail">
+                    <img class="icon" src="contact_icons/Mail.png" alt="mail icon">
+                </div>
+            </a>
+            <a href="https://www.linkedin.com/in/liz-miao-058199107/" target="_blank">
+                <div id="linkedin">
+                    <img class="icon" src="contact_icons/Linkedin.png" alt="linkedin icon">
+                </div>
+            </a>
+            <a href="https://www.facebook.com/miaeliii" target="_blank">
+                <div id="facebook">
+                    <img class="icon" src="contact_icons/Facebook.png" alt="facebook icon">
+                </div>
+            </a>
+            <a href="https://www.instagram.com/miaelii/" target="_blank">
+                <div id="instagram">
+                    <img class="icon" src="contact_icons/Instagram.png" alt="instagram icon">
+                </div>
+            </a>
         </div>
         <div id="footer">DESIGNED BY LIZ MIAO &#38 DEVELOPED BY STEPHEN BROWN-BOURNE &copy2018</div>
     </div>
@@ -455,7 +572,7 @@
         var row1 = document.getElementById("row1");
         var row2 = document.getElementById("row2");
         var row3 = document.getElementById("row3");
-        let t = 400;                   
+        let t = 400;
         // nav bar js
         var navLinks = document.getElementsByClassName("navli");
         var selectedStatus = {
@@ -466,8 +583,8 @@
         };
         function unSelectAll() {
             var j = 0;
-            for(var prop in selectedStatus) {
-                if(selectedStatus[prop]) {
+            for (var prop in selectedStatus) {
+                if (selectedStatus[prop]) {
                     navLinks[j].classList.toggle("selected");
                     selectedStatus[prop] = false;
                     return
@@ -478,7 +595,7 @@
         function setSelected(navNum) {
             unSelectAll();
             navLinks[navNum].classList.toggle("selected");
-            switch(navNum) {
+            switch (navNum) {
                 case 0:
                     selectedStatus["all"] = true;
                     break;
@@ -491,35 +608,35 @@
                 case 3:
                     selectedStatus["uc_davis"] = true;
                     break;
-            } 
+            }
         }
         // outer modal js
         var slides_and_dots = {
-                    "slidez": ["mySlides1", "mySlides2", "mySlides3", "mySlides4", "mySlides5", "mySlides6", "mySlides7", "mySlides8", "mySlides9"],
-                    "dotz": ["dot1", "dot2", "dot3", "dot4", "dot5", "dot6", "dot7", "dot8", "dot9"]
-                }
+            "slidez": ["mySlides1", "mySlides2", "mySlides3", "mySlides4", "mySlides5", "mySlides6", "mySlides7", "mySlides8", "mySlides9"],
+            "dotz": ["dot1", "dot2", "dot3", "dot4", "dot5", "dot6", "dot7", "dot8", "dot9"]
+        }
         var curSlideDot = {
             "slide": "",
             "dawt": ""
         }
         function setSlideDot(n) {
-            curSlideDot["slide"] = slides_and_dots["slidez"][n-1];
-            curSlideDot["dawt"] = slides_and_dots["dotz"][n-1];
-        }            
+            curSlideDot["slide"] = slides_and_dots["slidez"][n - 1];
+            curSlideDot["dawt"] = slides_and_dots["dotz"][n - 1];
+        }
         function openModal() {
             document.getElementById('myModal').style.display = "block";
         }
-        function closeModal () {
+        function closeModal() {
             document.getElementById('myModal').style.display = "none";
             var slides = document.getElementsByClassName(curSlideDot["slide"]);
-            slides[slideIndex-1].style.display = "none";
+            slides[slideIndex - 1].style.display = "none";
             var dots = document.getElementsByClassName(curSlideDot["dawt"]);
             for (i = 0; i < dots.length; i++) {
                 dots[i].style.display = "none";
             }
         }
         var modal = document.getElementById('myModal');
-        window.onclick = function(event) {
+        window.onclick = function (event) {
             if (event.target == modal) {
                 closeModal();
             }
@@ -549,63 +666,63 @@
                 slides[i].style.display = "none";
             }
             for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace( "active", "");
+                dots[i].className = dots[i].className.replace("active", "");
             }
-            slides[slideIndex-1].style.display = "block";
-            dots[slideIndex-1].className += " active";
-        }         
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
         function setAndShowProj(n) {
             setSlideDot(n);
             currentSlide(1);
         }
-    // project filtering js                   
+        // project filtering js                   
         function gridFade(gridRow) {
-            switch(gridRow) {
+            switch (gridRow) {
                 case 1:
-                addOut(row2);
-                addOut(row3);
-                break;
-                case 2: 
-                addOut(row1);
-                addOut(row3)
-                break;
-                case 3: 
-                addOut(row1);
-                addOut(row2);
+                    addOut(row2);
+                    addOut(row3);
+                    break;
+                case 2:
+                    addOut(row1);
+                    addOut(row3)
+                    break;
+                case 3:
+                    addOut(row1);
+                    addOut(row2);
             }
         }
         function removeGrid(gridRow) {
-            switch(gridRow) {
+            switch (gridRow) {
                 case 1:
-                row1.style.display = "flex";
-                row2.style.display = "none";
-                row3.style.display = "none";
-                break;
+                    row1.style.display = "flex";
+                    row2.style.display = "none";
+                    row3.style.display = "none";
+                    break;
                 case 2:
-                row1.style.display = "none";
-                row2.style.display = "flex";
-                row3.style.display = "none";
-                break;
+                    row1.style.display = "none";
+                    row2.style.display = "flex";
+                    row3.style.display = "none";
+                    break;
                 case 3:
-                row1.style.display = "none";
-                row2.style.display = "none";
-                row3.style.display = "flex";
-                break;
-            } 
+                    row1.style.display = "none";
+                    row2.style.display = "none";
+                    row3.style.display = "flex";
+                    break;
+            }
         }
         function formatGrids(gridRow) {
             gridFade(gridRow);
-            setTimeout(function() {removeGrid(gridRow);}, 420);
+            setTimeout(function () { removeGrid(gridRow); }, 420);
             rowFadeIn();
         }
         function rowFadeIn() {
-            if(row1.classList.contains("get-out")) {
+            if (row1.classList.contains("get-out")) {
                 fadeIn(row1, t);
             }
-            if(row2.classList.contains("get-out")) {
+            if (row2.classList.contains("get-out")) {
                 fadeIn(row2, t);
             }
-            if(row3.classList.contains("get-out")) {
+            if (row3.classList.contains("get-out")) {
                 fadeIn(row3, t);
             }
         }
@@ -626,25 +743,25 @@
         }
         function noIn(ele) {
             ele.classList.remove("get-in");
-        }            
+        }
         function fadeIn(row, delay) {
-            setTimeout(function() {addIn(row)}, delay);
-            setTimeout(function() {noOut(row)}, delay * 2);
-            setTimeout(function() {noIn(row)}, delay * 3);
-        }            
+            setTimeout(function () { addIn(row) }, delay);
+            setTimeout(function () { noOut(row) }, delay * 2);
+            setTimeout(function () { noIn(row) }, delay * 3);
+        }
         //format filter projects and adjust nav bar styling with one fucntion
         function filterAndNavStyle(projs) {
             setSelected(projs);
             formatGrids(projs);
-        }            
+        }
         function resetNavAndGrid() {
             setSelected(0);
             resetGrid();
         }
-        var shiftWindow = function() { scrollBy(0, -60) };
+        var shiftWindow = function () { scrollBy(0, -60) };
         if (location.hash) shiftWindow();
         window.addEventListener("hashchange", shiftWindow);
     </script>
 </body>
-</html>
 
+</html>

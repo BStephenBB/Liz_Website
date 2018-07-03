@@ -1,0 +1,23 @@
+{
+  "name": "lizportfolio",
+  "description": "*Designed by Liz Miao and coded by Stephen Brown-Bourne*",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BStephenBB/Liz_Website.git"
+  },
+  "author": "Stephen Brown-Bourne",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BStephenBB/Liz_Website/issues"
+  },
+  "homepage": "https://github.com/BStephenBB/Liz_Website#readme",
+  "dependencies": {
+    "node-sass": "^4.9.0"
+  }
+}
