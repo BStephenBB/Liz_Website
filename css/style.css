@@ -16,25 +16,22 @@ body {
   background-size: cover;
   background-position: center;
   height: 100vh; }
-
-#logo-div {
-  height: 116px;
-  margin-top: 30vh;
-  margin-bottom: 50px; }
-
-#logo {
-  height: 116px;
-  margin: 0; }
-
-/* navbar on home pg */
-#navbar-home ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  overflow: hidden; }
-
-#navbar-home ul li {
-  float: left; }
+  #home #logo-div {
+    height: 116px;
+    margin-top: 30vh;
+    margin-bottom: 50px; }
+    #home #logo-div #logo {
+      height: 116px;
+      margin: 0; }
+  #home #navbar-home ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden; }
+    #home #navbar-home ul li {
+      float: left; }
+      #home #navbar-home ul li a:hover {
+        opacity: 1; }
 
 .navstyle {
   display: block;
@@ -47,51 +44,38 @@ body {
   font-weight: 700;
   opacity: 0.6; }
 
-#navbar-home ul li a:hover {
-  opacity: 1; }
-
 /* Main Navbar CSS */
 #nav-div {
   position: sticky;
   top: 0;
   z-index: 1; }
-
-#logo-nav {
-  width: 34px;
-  height: 46px;
-  float: left;
-  background: url(pics/not-svg-logo-transparent.png) no-repeat;
-  background-size: 100%;
-  margin: 7px 0 7px 18px; }
-
-#logo-nav:hover {
-  background: url(pics/not-svg-logo.png) no-repeat;
-  background-size: 100%; }
-
-#main-nav {
-  height: 60px;
-  background-color: #102012; }
-
-#main-nav ul {
-  list-style-type: none;
-  padding: 0px;
-  margin: 0 50px 0 0;
-  overflow: hidden; }
-
-#navbar li {
-  float: right; }
+  #nav-div #logo-link #logo-nav {
+    width: 34px;
+    height: 46px;
+    float: left;
+    background: url(/pics/not-svg-logo-transparent.png) no-repeat;
+    background-size: 100%;
+    margin: 7px 0 7px 18px; }
+    #nav-div #logo-link #logo-nav:hover {
+      background: url(/pics/not-svg-logo.png) no-repeat;
+      background-size: 100%; }
+  #nav-div #main-nav {
+    height: 60px;
+    background-color: #102012; }
+    #nav-div #main-nav ul {
+      list-style-type: none;
+      padding: 0px;
+      margin: 0 50px 0 0;
+      overflow: hidden; }
+      #nav-div #main-nav ul li {
+        float: right; }
+        #nav-div #main-nav ul li a {
+          margin-top: 16px; }
+          #nav-div #main-nav ul li a:hover {
+            opacity: 1; }
 
 #contact-nav {
   padding-right: 0px; }
-
-#navbar li a {
-  margin-top: 16px; }
-
-#navbar li a:hover {
-  opacity: 1; }
-
-#nav-logo {
-  height: 16px; }
 
 /* About Page CSS */
 #about {
