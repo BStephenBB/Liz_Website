@@ -479,42 +479,43 @@ ul {
 .slide-items {
   display: flex;
   flex-direction: row;
+  img {
+    padding-right: 2.5vw;
+    padding-left: 2.5vw;
+    margin-top: 2.75vh;
+    height: auto;
+    width: 62.5%;
+    align-self: center;
+  }
+  div {
+    width: 25vw;
+  }
+  h1 {
+    font-family: "Playfair Display", Courier, monospace;
+    font-size: 18pt;
+    font-weight: 700;
+    line-height: 18pt;
+    color: $header-color;
+    margin-bottom: 16px;
+    margin-top: 100px;
+  }
+  p {
+    font-family: "Open Sans", Courier, monospace;
+    font-size: 12pt;
+    color: $text-color;
+  }
+  h3 {
+    position: absolute;
+    font-family: "Open Sans", Courier, monospace;
+    font-size: 12pt;
+    color: $text-color;
+    font-weight: 400;
+    bottom: 7%;
+    padding-right: 2.5vw;
+    font-style: italic;
+  }
 }
-.slide-items img {
-  padding-right: 2.5vw;
-  padding-left: 2.5vw;
-  margin-top: 2.75vh;
-  height: auto;
-  width: 62.5%;
-  align-self: center;
-}
-.slide-items div {
-  width: 25vw;
-}
-.slide-items h1 {
-  font-family: "Playfair Display", Courier, monospace;
-  font-size: 18pt;
-  font-weight: 700;
-  line-height: 18pt;
-  color: $header-color;
-  margin-bottom: 16px;
-  margin-top: 100px;
-}
-.slide-items p {
-  font-family: "Open Sans", Courier, monospace;
-  font-size: 12pt;
-  color: $text-color;
-}
-.slide-items h3 {
-  position: absolute;
-  font-family: "Open Sans", Courier, monospace;
-  font-size: 12pt;
-  color: $text-color;
-  font-weight: 400;
-  bottom: 7%;
-  padding-right: 2.5vw;
-  font-style: italic;
-}
+
 /* Next & previous buttons for slideshow */
 .prev,
 .next {
@@ -543,7 +544,8 @@ ul {
 #dot-div {
   position: absolute;
   bottom: 2%;
-  left: 45%;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 .dot {
   cursor: pointer;
@@ -630,6 +632,14 @@ ul {
   height: 40px;
   line-height: 40px;
   background: $light2;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
 }
 
 // skill chart styling
@@ -785,5 +795,48 @@ ul {
   .navstyle {
     font-size: 14pt;
     padding: 0px 12px;
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .slide-items {
+    display: flex;
+    flex-direction: column;
+    img {
+      height: auto;
+      width: 55%;
+      padding-right: 0;
+      padding-left: 0;
+      margin-top: 2%;
+      align-self: center;
+      box-shadow: 0 2px 4px hsla(0, 0, 0, 0.2);
+      border-radius: 4px;
+    }
+    div {
+      width: 55%;
+      margin: 0 auto;
+    }
+    h1 {
+      text-align: center;
+      font-size: 16pt;
+      font-weight: 700;
+      line-height: 16pt;
+      margin: 0;
+      margin-top: 2%;
+      margin-bottom: 1%;
+    }
+    p {
+      font-size: 10pt;
+    }
+    h3 {
+      display: none;
+      // position: absolute;
+      // font-family: "Open Sans", Courier, monospace;
+      // font-size: 12pt;
+      // font-weight: 400;
+      // bottom: 7%;
+      // padding-right: 2.5vw;
+      // font-style: italic;
+    }
   }
 }
